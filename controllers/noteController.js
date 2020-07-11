@@ -10,7 +10,6 @@ const note_index = function(req, res) {
 const note_details = (req, res) => {
     const id = req.params.id;
     Note.findById(id).then((result) => {
-
         res.render('notes/details.ejs', { title: 'Note', note: result });
     }).catch((err) => {
         res.status(404).render('404', { title: 'Note not found' });
@@ -27,6 +26,7 @@ const note_create_get = (req, res) => {
 const note_create_post = (req, res) => {
     const note = new Note(req.body);
     note.save().then((result) => {
+        console.log(result);
         res.redirect('/notes');
     }).catch((err) => {
         console.log(err);
@@ -35,7 +35,7 @@ const note_create_post = (req, res) => {
 
 const note_delete = (req, res) => {
     const id = req.params.id;
-    Blog.findByIdAndDelete(id).then((result => {
+    Note.findByIdAndDelete(id).then((result => {
         res.json({ redirect: '/notes' });
     })).catch(err => {
         console.log(err);

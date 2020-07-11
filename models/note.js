@@ -6,6 +6,15 @@ const noteSchema = new Schema({
         type: String,
         required: true
     },
+    email: {
+        type: String,
+        required: true
+    },
+    subject: {
+        maxlength: 120,
+        type: String,
+        required: true
+    },
     body: { 
         type: String,
         required: true

@@ -18,7 +18,7 @@ app.get('/about', function(req, res) {
     res.render('about.ejs', { title: 'About' });
 });
 
-app.use('/', noteRoutes);
+app.use('/notes', noteRoutes);
 
 app.use(function(req, res) {
     res.status(404).render('404', { title: '404' });
