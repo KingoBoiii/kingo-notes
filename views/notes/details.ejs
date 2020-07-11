@@ -9,6 +9,9 @@
             <div class="card-content white-text">
               <span class="card-title"><%= note.title %></span>
               <p><%= note.body %></p>
+              <p class="divider"></p>
+              <p>Created by: <%= note.email %></p>
+              <p>Created at: <%= note.createdAt %></p>
             </div>
             <div class="card-action">
                 <a class="delete btn red darken-1" data-doc="<%= note._id %>">Delete Note</a>

@@ -8,23 +8,27 @@
                 <div class="row">
                     <div class="input-field col s6">
                       <input id="title" name="title" type="text" class="validate">
-                      <label for="title">Note Title</label>
+                      <label for="title">Title</label>
+                      <span class="helper-text" data-error="Not valid" data-success="Valid">Enter Note title</span>
                     </div>
                     <div class="input-field col s6">
                       <input id="email" name="email" type="email" class="validate">
                       <label for="email">E-mail</label>
+                      <span class="helper-text" data-error="Not valid E-mail" data-success="Valid E-mail">Enter your E-mail</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                      <input id="subject" name="subject" type="text" class="validate" data-length="10"></input>
-                      <label for="subject">Note Subject</label>
+                      <input id="subject" name="subject" type="text" class="validate" data-length="30"></input>
+                      <label for="subject">Subject (30 characters)</label>
+                      <span class="helper-text" data-error="Max 30 characters" data-success="Valid">Enter a subject</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
                       <textarea id="body" name="body" class="materialize-textarea"></textarea>
-                      <label for="body">Note Body</label>
+                      <label for="body">Body</label>
+                      <span class="helper-text" data-error="Not valid" data-success="Valid">Enter the note</span>
                     </div>
                 </div>
                 <button href="/create" class="btn white indigo-text">Create Note</button>
